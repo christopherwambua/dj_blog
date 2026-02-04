@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Posts</title>
+    </head>
+    <body>
+        <h1>POSTS LIST</h1>
+        <ul>
+
+        {%for post in post%}
+        <li>
+            <p>{{post.title}}</p>
+        <span>{{post.created_at}}</span>
+        </li>
+        {%endfor%}
+        
+
+        </ul>
+        
+    </body>
+</html>
