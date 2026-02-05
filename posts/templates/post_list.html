@@ -9,7 +9,9 @@
 
         {%for post in post%}
         <li>
-            <p>{{post.title}}</p>
+            <p>
+                <a href="{% url 'post' pk=post.pk %}">{{post.title}}</a>
+            </p>
         <span>{{post.created_at}}</span>
         </li>
         {%endfor%}

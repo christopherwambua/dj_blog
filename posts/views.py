@@ -7,3 +7,13 @@ def posts(request):
     post= Posts.objects.all()
     context={'post':post}
     return render(request,'post_list.html',context) 
+
+def post(request,pk=None):
+    if pk:
+        post_item=Posts.objects.get(pk=pk)
+    else:
+        post_details=""
+
+    context={'post':post_item}
+
+    return render(request,'post.html',context)
