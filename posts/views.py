@@ -12,7 +12,7 @@ def post(request,pk=None):
     if pk:
         post_item=Posts.objects.get(pk=pk)
     else:
-        post_details=""
+        post_item=""
 
     context={'post':post_item}
 
